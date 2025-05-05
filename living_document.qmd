@@ -148,7 +148,7 @@ External links can be added verbatim by copying said link into the document and 
 <https://en.wikipedia.org/wiki/Bumblebee>
 ```
 
-If one does not want the link to appear in full, one can add another string in square brackets and the link, this time in regular brackets, to the right as exemplified below. The output will then display the link in the square brackets and clickin on it will redirect the reader to the landing page of the deposited link - here a page on [Bumblebees](https://en.wikipedia.org/wiki/Bumblebee)..
+If one does not want the link to appear in full, one can add another string in square brackets and the link, this time in regular brackets, to the right as exemplified below. The output will then display the link in the square brackets and clickin on it will redirect the reader to the landing page of the deposited link - here a page on [Bumblebees](https://en.wikipedia.org/wiki/Bumblebee).
 
 ```markdown
 [Bumblebees](https://en.wikipedia.org/wiki/Bumblebee)

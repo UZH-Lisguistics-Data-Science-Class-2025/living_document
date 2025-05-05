@@ -27,13 +27,13 @@ It will evolve as we work on it together, and serve as a reference for your grou
 ## Anatomy of a Quarto Report
 <!-- TODOs: metadata header, sections, layout options, customization -->
 
-# Metadata Header
+### Metadata Header
 
 The metadata header is a section at the top of the document which provides information about it, and allows for customized formatting and rendering.
 
-The formatting is applied only to the current document.
+The formatting applies only to the current document.
 
-Use triple - to delineate the block:
+Use triple dashes to delineate the block:
 
 ```
 ---
@@ -50,9 +50,10 @@ format: html / pdf / docx
 This option defines the format of the final product.
 
 ```
-date: date
+date: YYYY-MM-DD
 ```
-Sets the publication date.
+Sets the publication date (find supported date formats [here](https://quarto.org/docs/reference/dates.html)
+)
 
 ```
 execute: 
@@ -62,11 +63,11 @@ execute:
 ```
 Controls how code cells are executed:
 
-- echo: shows the code in the output if **true**
-- eval: executes the code if **true**
-- warning: includes warnings in the output if **true**
-- message: includes messages from code if **true**
-- error: displays error messages in the output if **true**
+- **echo**: shows the code in the output if **true**
+- **eval**: executes the code if **true**
+- **warning**: includes warnings in the output if **true**
+- **message**: includes messages from code if **true**
+- **error**: displays error messages in the output if **true**
 
 
 ## Basic Formatting & Markdown

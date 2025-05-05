@@ -27,6 +27,48 @@ It will evolve as we work on it together, and serve as a reference for your grou
 ## Anatomy of a Quarto Report
 <!-- TODOs: metadata header, sections, layout options, customization -->
 
+# Metadata Header
+
+The metadata header is a section at the top of the document which provides information about it, and allows for customized formatting and rendering.
+
+The formatting is applied only to the current document.
+
+Use triple - to delineate the block:
+
+```
+---
+some metadata
+---
+```
+Most commonly, the title block contains the title, subtitle, authors, date, doi and the abstract of the article.
+
+Other important options:
+
+```
+format: html / pdf / docx
+```
+This option defines the format of the final product.
+
+```
+date: date
+```
+Sets the publication date.
+
+```
+execute: 
+  echo: true / false
+  eval: true / false
+  warning: true / false ...
+```
+Controls how code cells are executed:
+
+- echo: shows the code in the output if **true**
+- eval: executes the code if **true**
+- warning: includes warnings in the output if **true**
+- message: includes messages from code if **true**
+- error: displays error messages in the output if **true**
+
+
 ## Basic Formatting & Markdown
 <!-- TODOs: headings, lists, emphasis, code blocks, links, footnotes -->
 

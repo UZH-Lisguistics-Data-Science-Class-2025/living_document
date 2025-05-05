@@ -115,6 +115,88 @@ For more formatting options, see the [Quarto Markdown Basics documentation](http
 
 ---
 
+Add instructions for creating and linking a .bib file to a Quarto document #14
+
+```markdown
+## Citations and Bibliography
+
+Citations in Quarto are managed using external bibliography files, typically with a `.bib` extension (in BibTeX format). This method keeps references organized and separates citation data from the main text.
+
+### Step 1: Create a `.bib` file
+
+A `.bib` file contains citation entries such as `@book`, `@article`, or `@misc`. Each entry stores metadata like author, title, and year. This format allows Quarto to format and render citations consistently.
+
+Example entry:
+
+```bibtex
+@book{manning1999,
+  author    = {Christopher D. Manning and Hinrich Schütze},
+  title     = {Foundations of Statistical Natural Language Processing},
+  year      = {1999},
+  publisher = {MIT Press}
+}
+```
+
+It is recommended to name the file `references.bib` and place it in the root of the Quarto project folder.
+
+### Step 2: Link the `.bib` file in the YAML header
+
+Add the following line to the YAML metadata block at the top of the `.qmd` file:
+
+```yaml
+bibliography: references.bib
+```
+
+We can also include multiple `.bib` files if needed:
+
+```yaml
+bibliography: [references.bib, extra.bib]
+```
+
+This tells Quarto where to find the citation data.
+
+### Step 3: Add inline citations
+
+Use `@key` to cite a source, where `key` is the BibTeX ID from the `.bib` file.
+
+```markdown
+Statistical NLP gained traction in the 1990s [@manning1999].
+```
+
+To suppress the author name (for example, in parenthetical form), add a minus sign:
+
+```markdown
+Many advances were based on earlier probabilistic methods [-@manning1999].
+```
+
+### Step 4: Generate the bibliography section
+
+At the end of document, include a section where the bibliography will be rendered:
+
+```markdown
+## References
+```
+
+Quarto will automatically generate this list using the sources you've cited. If no references section is added manually, it will appear at the end of the document by default.
+
+### Step 5: Change the citation style (Optional)
+
+Citation styles can be changed using the `csl:` option in the YAML block. For example:
+
+```yaml
+csl: apa.csl
+```
+
+CSL (Citation Style Language) files define formatting rules (e.g., APA, MLA, Chicago). Thousands of styles can be downloaded from the [Zotero Style Repository](https://www.zotero.org/styles).
+
+Tip: Tools like Zotero (with the Better BibTeX plugin) can help manage and export `.bib` files easily.
+
+### Further Reading and Resources
+
+- [Quarto Documentation – Citations](https://quarto.org/docs/authoring/footnotes-and-citations.html)
+- [Zotero Style Repository](https://www.zotero.org/styles)
+``` 
+
 # Git and Collaborative Workflows
 
 ## Branching and Merge Requests

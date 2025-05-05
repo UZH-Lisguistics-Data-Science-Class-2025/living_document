@@ -30,8 +30,6 @@ It will evolve as we work on it together, and serve as a reference for your grou
 ## Basic Formatting & Markdown
 <!-- TODOs: headings, lists, emphasis, code blocks, links, footnotes -->
 
-Show how to use basic text formatting (bold, italic, strikethrough) with examples #3 
-
 ### Emphasis and Text Styles
 
 In Markdown and Quarto, text formatting is done by surrounding words or phrases with special symbols. This method makes formatting quick, consistent, and readable even in plain text. It also helps writers focus on content without relying on visual formatting tools.
@@ -115,9 +113,6 @@ For more formatting options, see the [Quarto Markdown Basics documentation](http
 
 ---
 
-Add instructions for creating and linking a .bib file to a Quarto document #14
-
-```markdown
 ## Citations and Bibliography
 
 Citations in Quarto are managed using external bibliography files, typically with a `.bib` extension (in BibTeX format). This method keeps references organized and separates citation data from the main text.
@@ -139,6 +134,8 @@ Example entry:
 
 It is recommended to name the file `references.bib` and place it in the root of the Quarto project folder.
 
+Tip: Tools like Zotero (with the Better BibTeX plugin) can help manage and export `.bib` files easily.
+
 ### Step 2: Link the `.bib` file in the YAML header
 
 Add the following line to the YAML metadata block at the top of the `.qmd` file:
@@ -157,17 +154,20 @@ This tells Quarto where to find the citation data.
 
 ### Step 3: Add inline citations
 
-Use `@key` to cite a source, where `key` is the BibTeX ID from the `.bib` file.
+To cite a source in the text, use `@key`, where `key` is the BibTeX ID from your `.bib` file.
 
-```markdown
-Statistical NLP gained traction in the 1990s [@manning1999].
-```
+There are two common ways to format inline citations:
 
-To suppress the author name (for example, in parenthetical form), add a minus sign:
+- `[@manning1999]` → renders as: (Manning and Schütze 1999)  
+  *Used when the author name should appear in the citation.*
 
-```markdown
-Many advances were based on earlier probabilistic methods [-@manning1999].
-```
+- `[-@manning1999]` → renders as: (1999)  
+  *Used when the author name is already mentioned in the sentence.*
+
+For example:
+
+See [@manning1999]. 
+Published in [-@manning1999].
 
 ### Step 4: Generate the bibliography section
 
@@ -188,8 +188,6 @@ csl: apa.csl
 ```
 
 CSL (Citation Style Language) files define formatting rules (e.g., APA, MLA, Chicago). Thousands of styles can be downloaded from the [Zotero Style Repository](https://www.zotero.org/styles).
-
-Tip: Tools like Zotero (with the Better BibTeX plugin) can help manage and export `.bib` files easily.
 
 ### Further Reading and Resources
 

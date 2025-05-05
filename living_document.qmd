@@ -40,7 +40,7 @@ Use triple dashes to delineate the block:
 some metadata
 ---
 ```
-Most commonly, the title block contains the title, subtitle, authors, date, doi and the abstract of the article.
+Most commonly, the title block contains the **title**, **subtitle**, **authors**, **date**, **doi** and the **abstract** of the article.
 
 Other important options:
 

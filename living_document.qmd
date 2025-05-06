@@ -245,7 +245,7 @@ As you know, Git is an amazing tool to work collaboratively on a project, but wh
   6. On the bottom left, you can now add a title and a description to your commit in a text field. Make sure to briefly but clearly describe what changes you have made
   7. You can now commit your changes to your branch by clicking on the blue button under the text field ***Commit to branch_name***
   8. Now, it's time to pull/merge your commit into the main branch. If someone else is the administrator and has to check your commits for pulling, you can click on *Preview pull request* under the ***Branch*** dropdown menu at the very top
-  9. This opens a new window where you can view your commits and adjust the description or title if necessary. If everything's good, you can click on the green button ***Create pull request*** on the bottom right
+  9. This opens a new window where you can view your commits and adjust the description or title if necessary. If everything's good, you can click on the blue button ***Create pull request*** on the bottom right
   10. This automatically redirects you to the web version of GitHub. Go back to *GitHub Desktop*, click on the ***Branch*** dropdown like in step 8, and select *Update from upstream/main* or use the shortcut Ctrl+Shift+U
   11. Now you have to wait for your administrator to review your commit and merge it into the main document.
 

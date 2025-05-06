@@ -248,7 +248,7 @@ As you know, Git is an amazing tool to work collaboratively on a project, but wh
   9. Go back to *GitHub Desktop*, again click on the ***Branch*** dropdown menu, and select *Update from upstream/main* or use the shortcut Ctrl+Shift+U
   10. Now you have to wait for your administrator to review your commits and merge it into the main document.
 
-*Note: If you want to make any changes to the file after the completion of step 4, you need to start over from step 1*  
+*Note: If you want to make any changes to the file after the completion of step 4, you need to start over from the beginning - except for step 3 that only has to be done once*  
 
 ## Best Practices
 <!-- TODOs: shared tips, helpful links -->

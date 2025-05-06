@@ -236,16 +236,16 @@ kable(
 <!-- TODOs: clone, commit, push, sync conflicts -->
 
 ### Preparing commits
-As you know, Git is an amazing tool to work collaboratively on a project, but when it comes to making a commit to the project, this can lead to some confusion. So here is a checklist when you want to preapre a commit for merging into the project:
+As you know, Git is an amazing tool to work collaboratively on a project, but when it comes to making commits to the project, this can lead to some confusion. So here is a checklist when you want to preapre a commit for merging into the project:
   1. Save your changes in your local editor - *RStudio, Visual Studio Code, or whatever you are using*. Check that you want to commit a qmd file, *quarto markdown*, and not an already rendered version/file
   2. Go to *GitHub Desktop*. You should now be able to see your changes on the file. If not, check if the correct branch in the ***Current branch*** dropdown menu at the top is selected
   3. Publish your file/branch. You can do so by clicking on ***Publish branch*** next to the ***Current branch*** menu on top
-  4. On the bottom left, you can now add a title and a description to your commit in a text field. Make sure to briefly but clearly describe what changes you have made. You can now commit your changes to your branch by clicking on the blue button under the text field ***Commit to branch_name***
-  5. Now, it's time to pull/merge your commit into the main branch. If someone else is the administrator and has to check your commits for pulling, you need to click on *Preview pull request* under the ***Branch*** dropdown menu at the very top
-  6. This opens a new window where you can view your commits and adjust the description or title of your commit if necessary. If everything's good, you can click on the blue button ***Create pull request*** on the bottom right
-  7. A window pops up in which it asks you if you want to push your commit. You now have to click on ***Push commit***
+  4. On the bottom left, you can now add a title and a description to your commits in a text field. Make sure to briefly but clearly describe what changes you have made. You can now commit your changes to your branch by clicking on the blue button under the text field ***Commit to branch_name***
+  5. Now, it's time to pull/merge your commits into the main branch. If someone else is the administrator and has to check your commits for pulling, you need to click on *Preview pull request* under the ***Branch*** dropdown menu at the very top
+  6. This opens a new window where you can view your commits and adjust the description or title of your commits if necessary. If everything's good, you can click on the blue button ***Create pull request*** on the bottom right
+  7. A window pops up in which it asks you if you want to push your commits. You now have to click on ***Push commits***
   8. This automatically redirects you to the web version of GitHub. Go back to *GitHub Desktop*, again click on the ***Branch*** dropdown menu, and select *Update from upstream/main* or use the shortcut Ctrl+Shift+U
-  9. Now you have to wait for your administrator to review your commit and merge it into the main document.
+  9. Now you have to wait for your administrator to review your commits and merge it into the main document.
 
 *Note: If you want to make any changes to the file after the completion of step 4, you need to start over from step 1*  
 

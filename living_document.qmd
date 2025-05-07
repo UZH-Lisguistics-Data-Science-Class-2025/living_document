@@ -101,15 +101,6 @@ Always include a space after the hash symbols. For example:
 ###### Notes
 ```
 
-This will render as:
-
-# Introduction  
-## Methodology  
-### Data Collection  
-#### Survey Design  
-##### Question Format  
-###### Notes
-
 To ensure consistency, avoid skipping levels (e.g., going directly from `#` to `###`) unless intentionally needed for visual clarity or document structure.
 
 For more, see [Quarto documentation on headers](https://quarto.org/docs/authoring/markdown-basics.html#headers).

@@ -245,8 +245,8 @@ As you know, Git is an amazing tool to work collaboratively on a project, but wh
   6. This opens a new window where you can view your commits and adjust the description or title of your commits if necessary. If everything's good, you can click on the blue button ***Create pull request*** on the bottom right
   7. A window pops up in which it asks you if you want to push your commits. You now have to click on ***Push commits***
   8. This automatically redirects you to the web version of GitHub. Now, you can add a title and description to your commits and check if you pushed the correct file
-  9. Go back to *GitHub Desktop*, again click on the ***Branch*** dropdown menu, and select *Update from upstream/main* or use the shortcut Ctrl+Shift+U
-  10. Now you have to wait for your administrator to review your commits and merge it into the main document.  
+  9. After doing so, click on ***Create pull request***. 
+  10. Go back to *GitHub Desktop*, again click on the ***Branch*** dropdown menu, and select *Update from upstream/main* or use the shortcut Ctrl+Shift+U. Now you have to wait for your administrator to review your commits and merge it into the main document.  
 
 ## Best Practices
 <!-- TODOs: shared tips, helpful links -->

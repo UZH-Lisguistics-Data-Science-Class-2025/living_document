@@ -232,7 +232,7 @@ As discussed in @sec-NAME,...
 ## Code Cells and Quarto Options
 <!-- TODOs: basic chunk, inline code, echo, chunk options -->
 
-### Basic R Code Chunks
+### **Basic R Code Chunks**
 To include R code in your Quarto document, you need to create a code chunk. Code chunks begin with three backticks followed by `{r}` and end with three backticks.
 
 ```{r}
@@ -244,7 +244,7 @@ Create executable R code using code cells marked with `{r}`. These run during re
 The content of the code chunk will be executed and the results will be displayed in the output document.
 By default, both code and results are shown in the final document
 
-### Basic Computation Examples with R
+### **Basic Computation Examples with R**
 
 #### Numeric Computations
 
@@ -293,13 +293,51 @@ mean_value
 
 *For more information, you can visit [Quarto - Using R] https://quarto.org/docs/computations/r.html and [Quarto - Using R] https://quarto.org/docs/computations/execution-options.html*
 
-***Tasks for Code Cells are still under processing!!! @ZricGao***
+### **Inline Code**
 
-### Inline Code
+In Quarto and R Markdown, you can embed R code directly within your text using **inline code execution**. This allows you to dynamically compute values and display them in your document.  
 
-You can also include R code inline within your text using the syntax `` `r ` ``. This is useful for integrating computed values directly into your narrative.
-For example, if you write: The sum of 10 and 20 is `` `r x + y` ``.
-It will be rendered as: The sum of 10 and 20 is 30.
+#### Basic Syntax
+Inline code is written as:  
+`r R_EXPRESSION`  
+Here, r indicates that the following expression should be executed using the R language.
+
+#### Basic Calculations
+
+2 + 2 equals `r 2+2`
+
+It renders as:
+2 + 2 equals 4
+
+#### Using Variables
+`r x <- 10`
+`r y <- 5`
+The result of x + y is `r x + y`
+
+It renders as:
+The result of x + y is 15
+
+#### Function Application
+Today is `r format(Sys.Date(), "%B %d, %Y")`
+
+It renders as:
+Today is May 12, 2025 (*Today's Date*)
+
+#### Data Processing
+`r data <- c(23, 45, 67, 12, 89)`
+The average of the data is `r mean(data)`
+The maximum value is `r max(data)`
+
+It renders as:
+The average of the data is 47.2
+The maximum value is 89
+
+#### Use Cases
+This inline code execution functionality is especially useful in:
+Data analysis reports, Scientific research papers, Technical documentation, Real-time updated dashboards and Educational materials
+Through this approach, documents can contain not only static content but also dynamically generated content based on code execution results, making documents more interactive and up-to-date.
+
+*You can find relevent information on [Quarto - Inline Code] https://quarto.org/docs/computations/inline-code.html*
 
 ### Common code chunk options
 

@@ -594,6 +594,7 @@ You can now access your new branch via the "Current branch" drop-down at the top
 
 ### Sync Local Repository on GitHub Desktop with Remote Repository
 
+
 NB: To synchronize the local repository through GitHub Desktop with its remote counterpart in the first place, said repository must already be imported into GitHub Desktop. If this is the case, proceed as follows to sync.
 
 1. In GitHub Desktop, navigate to the repository you wish to sync using the drop-down at the top left corner. For this, open the drop-down (1. in left image below) and select the according repository (as in 2).
@@ -615,6 +616,7 @@ In case you have no commits/changes to publish, the button will only read "Fetch
 In case you just Pushed a commit, you can now also open a pull request.
 
 ![ ](images/git_sync_workflows-3.jpg)
+
 
 
 ## Best Practices

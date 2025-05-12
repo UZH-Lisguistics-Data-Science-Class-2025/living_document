@@ -672,6 +672,12 @@ penguin_adelie_stats <- penguins |>                                    # <2>
 
 ---
 
+# Multiformat Documents
+
+You can generate output of the same document in several different formats.
+
+---
+
 
 # Extra Tips and Tricks
 <!-- TODOs: VSCode setup for Quarto/RMarkdown etc. -->

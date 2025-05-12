@@ -410,8 +410,7 @@ CSL (Citation Style Language) files define formatting rules (e.g., APA, MLA, Chi
 ### Further Reading and Resources
 
 - [Quarto Documentation – Citations](https://quarto.org/docs/authoring/footnotes-and-citations.html)
-- [Zotero Style Repository](https://www.zotero.org/styles)
-``` 
+- [Zotero Style Repository](https://www.zotero.org/styles) 
 
 # Git and Collaborative Workflows
 
@@ -426,8 +425,8 @@ As you know, Git is an amazing tool to work collaboratively on a project, but wh
 
 #### Making a Commit 
 
-Inserting image
-  
+  ![Image: Making a Commit](images\Making_a_commit.png)
+
   1. Check that you are on the correct branch on *GitHub Desktop*
   2. Edit and save your changes in your local editor - *RStudio, Visual Studio Code, or whatever you are using*. Check that it's a qmd file, *quarto markdown*, and not another type of file
   3. Go to *GitHub Desktop*. Check if the changes shown are correct. If not, make sure if the correct file is selected and save it again in your local editor
@@ -437,8 +436,6 @@ Inserting image
 
 #### Publishing Your Branch for a Pull Request
 
-Inserting images?
-
   7. Publish your file/branch. You can do so by clicking on ***Publish branch*** next to the ***Current branch*** menu on top
   8. Now, it's time to pull/merge your commits into the main branch. If someone else is the administrator and has to check your commits for pulling, you need to click on *Preview pull request* under the ***Branch*** dropdown menu at the very top
   9. This opens a new window where you can view your commits and adjust the description or title of your commits if necessary. If everything's good, you can click on ***Create pull request***
@@ -447,8 +444,6 @@ Inserting images?
   12. Click on ***Create pull request*** 
 
 #### Synchronizing the Branch with Main
-
-Inserting image?
 
   13. Go back to *GitHub Desktop*, again click on the ***Branch*** dropdown menu, and select *Update from upstream/main* or use the shortcut Ctrl+Shift+U 
   14. Now you have to wait for your administrator to review your commits and merge it into the main document.  

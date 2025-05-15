@@ -431,41 +431,41 @@ In Quarto and R Markdown, you can embed R code directly within your text using *
 
 #### Basic Syntax
 Inline code is written as:  
-`r R_EXPRESSION`  
+`` `r R_EXPRESSION` ``
 
 In Quarto documents, inline code is marked with the `r` syntax (backtick + r + space + code + backtick).
 When the document is rendered, the code is executed and its results are embedded in the text.
 
 #### Basic Calculations
 
-2 + 2 equals `r 2+2`
+2 + 2 equals `` `r 2+2` ``
 
 It renders as:
 2 + 2 equals 4
 
 #### Using Variables
 Similar to the basic R language code, we can also use the same symbols to define some variables, for example:
-`r x <- 10`
-`r y <- 5`
-The result of x + y is `r x + y`
+`` `r x <- 10` ``
+`` `r y <- 5` ``
+The result of x + y is `` `r x + y` ``
 
 It renders as:
 The result of x + y is 15
 
 #### Function Application and Data Processing
 Functions can be called from inline code:
-`r data <- c(23, 45, 67, 12, 89)`
-The average of the data is `r mean(data)`
-The maximum value is `r max(data)`
+`` `r data <- c(23, 45, 67, 12, 89)` ``
+The average of the data is `` `r mean(data)` ``
+The maximum value is `` `r max(data)` ``
 
 It renders as:
 The average of the data is 47.2
 The maximum value is 89
 
 
-For example, we can control number display with `format()`, use `Sys.Date()` function to get the system date, and use `"%B %d, %Y"` to define the format:
+For example, we can control number display with `` `format()` ``, use `` `Sys.Date()` `` function to get the system date, and use `` `"%B %d, %Y"` `` to define the format:
 
-Today is `r format(Sys.Date(), "%B %d, %Y")`
+Today is `` `r format(Sys.Date(), "%B %d, %Y")` ``
 
 It renders as:
 Today is May 12, 2025 # <1>
@@ -521,7 +521,6 @@ mean(c(1, 2, 3, 4, 5))
 ## Images and Plots
 <!-- TODOs: inserting local images, captions, figure sizing, code-generated plots -->
 ### How to reference images in text
-
 
 ## Tables
 <!-- TODOs: markdown tables, knitr::kable(), comparison -->

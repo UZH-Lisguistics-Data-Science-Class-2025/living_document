@@ -299,7 +299,7 @@ As discussed in @sec-NAME,...
 ## Code Cells and Quarto Options
 <!-- TODOs: basic chunk, inline code, echo, chunk options -->
 
-### **Basic R Code Chunks**
+### Basic R Code Chunks
 To include R code in your Quarto document, you need to create a code chunk. Code chunks begin with three backticks followed by `{r}` and end with three backticks.
 
 ```{{r}}
@@ -312,7 +312,7 @@ Create executable R code using code cells marked with `{r}`. These run during re
 The content of the code chunk will be executed and the results will be displayed in the output document.
 By default, both code and results are shown in the final document
 
-### **Basic Computation Examples with R**
+### Basic Computation Examples with R
 
 #### Numeric Computations
 
@@ -424,32 +424,32 @@ mean_value
 
 *For more information, you can visit [Quarto - Using R](https://quarto.org/docs/computations/r.html) and [Quarto - Using R](https://quarto.org/docs/computations/execution-options.html)*
 
-### **Inline Code**
+### Inline Code
 
 In Quarto and R Markdown, you can embed R code directly within your text using **inline code execution**. This allows you to dynamically compute values and display them in your document.  
 
 #### Basic Syntax
-Inline code is written as:  
-\`R_EXPRESSION`
+Inline code is written as:  `` `{{r}} R_EXPRESSION` ``
 
 In Quarto documents, inline code is marked with the `r` syntax (backtick + r + space + code + backtick).
 When the document is rendered, the code is executed and its results are embedded in the text.
 
 #### Basic Calculations
 
-2 + 2 equals ` ` r 2 + 2 ` `
+2 + 2 equals `` ` {{r}} 2 + 2 `` `
 
 It renders as:
-2 + 2 equals `r 2 + 2`
+2 + 2 equals `{{r}} 2 + 2`
 
 #### Using Variables
+
 Similar to the basic R language code, we can also use the same symbols to define some variables, for example:
 
-`` r x <- 10 ``, 
-`` r y <- 5 ``
+`` `{{r}} x <- 10`  ``, 
+`` `{{r}} y <- 5 `` `
 `r x <- 10`
 `r y <- 5`
-The result of x + y is `` r x + y ``
+The result of x + y is `` `{{r}} x + y` ``
 
 It renders as:
 The result of x + y is `r x + y`
@@ -457,11 +457,11 @@ The result of x + y is `r x + y`
 #### Function Application and Data Processing
 Functions can be called from inline code:
 
-`` r data <- c(23, 45, 67, 12, 89) ``
+`` `{{r}} data <- c(23, 45, 67, 12, 89)` ``
 `r data <- c(23, 45, 67, 12, 89)`
-The average of the data is `` r mean(data) ``
+The average of the data is `` `{{r}} mean(data)` ``
 
-The maximum value is `` r max(data) ``
+The maximum value is `` `{{r}} max(data)` ``
 
 It renders as:
 
@@ -470,9 +470,9 @@ The average of the data is `r mean(data)`
 The maximum value is `r max(data)`
 
 
-For example, we can control number display with `` `format()` ``, use `` `Sys.Date()` `` function to get the system date, and use `` `"%B %d, %Y"` `` to define the format:
+For example, we can control number display with `format()`, use `Sys.Date()` function to get the system date, and use `"%B %d, %Y"` to define the format:
 
-Today is `` r format(Sys.Date(), "%B %d, %Y") ``
+Today is `` `{{r}} format(Sys.Date(), "%B %d, %Y") `` `
 
 It renders as:
 Today is `r format(Sys.Date(), "%B %d, %Y")`
@@ -491,7 +491,7 @@ When using inline code, keep it concise. Complex calculations are best done in c
 
 *You can find relevent information on [Quarto - Inline Code](https://quarto.org/docs/computations/inline-code.html)*
 
-### **Common code chunk options**
+### Common code chunk options
 
 Quarto provides many options to control how code chunks are executed and displayed. These options are specified within the curly braces of the code chunk declaration.
 Common code chunk options include:

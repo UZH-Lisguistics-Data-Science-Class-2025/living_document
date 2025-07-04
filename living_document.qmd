@@ -1130,6 +1130,45 @@ quarto render living_document.qmd
 
 The nice thing is that the rendered html file contains clickable links to the other formats.
 
+
+```yaml
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    code-fold: false
+    code-summary: "Show code"
+    number-sections: true
+    theme: cosmo
+    page-layout: full
+    self-contained: true
+
+  odt:
+    toc: true
+    number-sections: true
+    colorlinks: true
+    documentclass: article
+    papersize: a4
+    output-file: living_document
+
+  docx:
+    toc: true
+    number-sections: true
+    colorlinks: true
+    documentclass: article
+    papersize: a4
+    output-file: living_document
+  
+  pdf:
+    toc: true
+    number-sections: true
+    colorlinks: true
+    documentclass: article
+    papersize: a4
+    output-file: living_document
+```
+
+
 ------------------------------------------------------------------------
 
 # Extra Tips and Tricks

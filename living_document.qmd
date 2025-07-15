@@ -1314,6 +1314,109 @@ Now, this colour palette will be included in our previously made bar plot.[^2]
 barplot(y, names.arg = x, main = "Colour-blind friendly Bar Plot", rep(1,5), col = R4_colours)
 ```
 
+## Axis labels, titles & subtitles
+Clear labels and annotations are the difference between “pretty picture” and communicative figure.
+```{r}
+#| label: gg-axis-labels
+#| fig-cap: "Basic axis labeling best‑practice"
+#| echo: true
+library(ggplot2)
+
+ggplot(mtcars, aes(wt, mpg, colour = factor(gear))) +
+geom_point(size = 2) +
+labs(
+  title    = "Fuel economy declines as car weight increases",       # <1>
+  subtitle = "Motor Trend Road Tests, 1973–74",                     # <2>
+  x        = "Weight (1000 lbs)",                                   # <3>
+  y        = "Fuel economy (mpg)",                                  # <3>
+  colour   = "Gears",                                               # <4>
+  caption  = "Data: mtcars"                                         # <5>
+) +
+theme_bw(base_size = 11)                                            # <6>
+```
+
+* Concise title – one dependent clause is enough.
+
+* Contextual subtitle – site, time span, cohort, etc.
+
+* Put units in parentheses; avoid abbreviations unless universal.
+
+* Legend titles follow the same rules as axes.
+
+* Always cite your data source.
+
+* A neutral theme (e.g. theme_bw() or theme_minimal()) lets labels look better.
+
+## In‑plot annotations
+```{r}
+#| label: gg-annotation
+#| echo: true
+ggplot(airquality, aes(Day, Temp)) +
+  geom_line() +
+  annotate("rect", xmin = 15, xmax = 30, ymin = -Inf, ymax = Inf,
+           fill = "grey92", alpha = .3) +                             # <1>
+  annotate("text", x = 22.5, y = 95,
+           label = "Heatwave\nperiod", size = 3.5) +                  # <2>
+  labs(x = "Day of month", y = "Temperature (°F)") +
+  theme_classic()
+```
+
+* Highlight a date range with a translucent rectangle.
+
+* Keep annotation font smaller than axis text; line‑break long labels.
+
+## Saving & Organizing Plots
+```{r}
+#| label: save-plot
+#| echo: true
+library(fs)                          # for dir_create()
+dir_create("outputs/figures")        # <1>
+
+ggsave(
+  filename = "outputs/figures/fig_penguin-mass.png",  # <2>
+  plot      = last_plot(),                            # <3>
+  width     = 140, height = 100, units = "mm",        # <4>
+  dpi       = 300                                     # <5>
+)
+```
+
+* Create the folder if it doesn’t exist (avoids “path not found” on CI).
+
+* Snake‑case, no spaces, prefix with fig_, tbl_, etc.
+
+* last_plot() is handy in interactive work; in scripts, pass the object.
+
+* Pick metric units (mm or cm) for journal specs.
+
+* 300–600 dpi ensures crisp print; down‑sample later for web.
+
+**Batch‑saving inside a script**
+```{r}
+#| eval: false
+plots <- list(
+  fig_length = p1,
+  fig_depth  = p2,
+  fig_ratio  = p3
+)
+
+iwalk(plots, \(plt, nm) {
+  ggsave(
+    file = glue::glue("outputs/figures/{nm}.pdf"),
+    plot = plt,
+    width = 120, height = 90, units = "mm", dpi = 600
+  )
+})
+```
+
+**Folder convention**
+```text
+outputs/
+├── figures/      # static images (png, pdf, svg)
+├── interactive/  # htmlwidgets, plotly, etc.
+└── tables/
+```
+* Keep raw scripts in R/, rendered assets in outputs/; never commit auto‑generated PDF or HTML into R/ or data/.
+
 
 # AI Usage Guidelines
 
